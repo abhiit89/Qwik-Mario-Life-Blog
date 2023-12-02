@@ -1,8 +1,4 @@
-import {
-  component$,
-  useResource$,
-  Resource,
-} from "@builder.io/qwik";
+import { component$, useResource$, Resource } from "@builder.io/qwik";
 import { Link, type DocumentHead } from "@builder.io/qwik-city";
 
 interface BlogData {

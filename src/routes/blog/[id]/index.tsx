@@ -9,11 +9,11 @@ interface BlogData {
 
 export const useBlogDetails = routeLoader$(async (requestEvent) => {
   const res = await fetch(
-    `http://localhost:3000/blogs/${requestEvent.params.id}`
+    `http://localhost:3000/blogs/${requestEvent.params.id}`,
   );
-    if (!res.ok) {
-    console.log('redirecting user')
-    throw requestEvent.redirect(302, '/about');
+  if (!res.ok) {
+    console.log("redirecting user");
+    throw requestEvent.redirect(302, "/about");
   }
   const blog = await res.json();
   return blog as BlogData;

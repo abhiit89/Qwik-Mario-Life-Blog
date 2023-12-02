@@ -1,10 +1,10 @@
 import { Slot, component$, useStylesScoped$ } from "@builder.io/qwik";
 import ModalStyles from "./modal.css?inline";
-import type {PropFunction} from "@builder.io/qwik";
+import type { PropFunction } from "@builder.io/qwik";
 interface ModalProps {
   size: "sm" | "lg";
   frosted?: boolean;
-  onClose?: PropFunction<()=> void>;
+  onClose?: PropFunction<() => void>;
 }
 
 export default component$((props: ModalProps) => {

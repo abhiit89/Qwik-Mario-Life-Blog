@@ -3,11 +3,11 @@ import AboutStyles from "./about.css?inline";
 import Modal from "~/components/modal/modal";
 export default component$(() => {
   useStyles$(AboutStyles);
-    const modalVisible = useSignal(false);
-    
-    const closeModal = $(() => {
-        modalVisible.value = false;
-    });
+  const modalVisible = useSignal(false);
+
+  const closeModal = $(() => {
+    modalVisible.value = false;
+  });
   return (
     <article>
       <h2>Hello This is Mario!</h2>
@@ -28,11 +28,7 @@ export default component$(() => {
         {modalVisible.value ? "Hide Modal" : "Show Modal"}
       </button>
       {modalVisible.value && (
-        <Modal
-          size="lg"
-          frosted={true}
-          onClose={closeModal}
-        >
+        <Modal size="lg" frosted={true} onClose={closeModal}>
           <div q:slot="content">
             <h2>Great News</h2>
             <p>
